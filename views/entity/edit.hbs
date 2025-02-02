@@ -1,0 +1,25 @@
+ <main>
+    <form class="theater-form" method="post">
+        <h1>Edit Theater</h1>
+        <div>
+            <label for="title">Theater Title:</label>
+            <input type="text" name="title" placeholder="Theater name"
+                value="{{x.title}}">
+        </div>
+        <div>
+            <label for="description">Theater Description:</label>
+            <textarea name="description" placeholder="Description">{{x.description}}</textarea>
+        </div>
+        <div>
+            <label for="imageUrl">Image url:</label>
+            <input type="text" name="imageUrl" placeholder="Image Url"
+                value="{{x.imageUrl}}">
+        </div>
+        <div class="check">
+            <label for="check-box">Public</label>
+            <input type="checkbox" name="isPublic" {{x.isChecked}}
+                id="check-box">
+        </div>
+        <button class="btn" type="submit">Submit</button>
+    </form>
+</main>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{{title}}</title>
+        <link href="/css/style.css" type="text/css" rel="stylesheet">
+        <link rel="shortcut icon" href="/favicon.ico"
+            type="image/x-icon">
+        <script src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <nav>
+                <a>Theater</a>
+                <ul>
+                    <li><a href="/">Home </a></li>
+                    {{#if user}}
+                    <li>Hello {{user.username}}</li>
+                    <li><a href="/auth/logout">Logout</a></li>
+                    {{else}}
+                    <li><a href="/auth/login">Login</a></li>
+                    <li><a href="/auth/register">Register</a></li>
+                    {{/if}}
+                </ul>
+            </nav>
+            {{#if err}}
+            <section class="notifications error">
+                <p>{{err.msg}}</p>
+            </section>
+            {{/if}}
+            {{{body}}}
+            <div id="root"></div>
+            {{!-- <script src="/script.js" type="text/babel"></script> --}}
+            <footer>
+                <div>© 2020
+                    <a href="https://softuni.bg/courses/js-back-end">JS Back-End</a>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

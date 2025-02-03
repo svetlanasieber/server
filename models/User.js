@@ -4,7 +4,7 @@ import {
     ENGLISH_ALPHANUMERIC_PATTERN_FOR_EMAIL,
     ENGLISH_ALPHANUMERIC_PATTERN_WITH_SPACE
 } from '../config/constants.js';
-
+   
 const userSchema = new mongoose.Schema({
     id: mongoose.Types.ObjectId,
     username: {
